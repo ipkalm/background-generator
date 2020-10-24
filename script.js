@@ -1,14 +1,12 @@
 "use strict";
 
-var css = document.querySelector('h3');
+var css    = document.querySelector('h3');
 
 var color1 = document.querySelector('input[name="color1"]');
 var color2 = document.querySelector('input[name="color2"]');
 
-var body = document.getElementById('body');
-
-var btn = document.getElementById('randomize-bg');
-
+var body   = document.getElementById('body');
+var btn    = document.getElementById('randomize-bg');
 
 function setGradient() {
     body.style.background = `linear-gradient(to right,
@@ -23,17 +21,17 @@ function getRandomRGBCode() {
 }
 
 function getRandomRGBColor() {
-    var red = getRandomRGBCode();
+    var red   = getRandomRGBCode();
     var green = getRandomRGBCode();
-    var blue = getRandomRGBCode();
+    var blue  = getRandomRGBCode();
 
     return `rgb(${red}, ${green}, ${blue})`;
 }
 
 function setBackgroundGradient() {
-    var left = getRandomRGBColor();
+    var left  = getRandomRGBColor();
     var right = getRandomRGBColor();
-    console.log(left, right);
+    // console.log(left, right);
     body.style.background = `linear-gradient(to right,
         ${left}, 
         ${right})`;
